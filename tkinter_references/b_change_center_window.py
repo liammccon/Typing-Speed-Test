@@ -20,7 +20,7 @@ def main():
 
     root.mainloop()
 
-def center_the_screen(root, window_width = 600, window_height = 400 ):
+def center_the_screen(root, window_width = 600, window_height = 400, resizable = True):
     # get screen dimension
     screen_width = root.winfo_screenwidth()
     screen_height = root.winfo_screenheight()
@@ -31,6 +31,9 @@ def center_the_screen(root, window_width = 600, window_height = 400 ):
 
     # set the positions
     root.geometry(f'{window_width}x{window_height}+{center_x}+{center_y}')
+
+    if not resizable:
+        turn_off_resizing(root)
 
 def turn_off_resizing(root):
     root.resizable(False, False)
