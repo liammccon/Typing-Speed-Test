@@ -48,7 +48,7 @@ def main():
     message = ttk.Label(root, text = '')
     button = ttk.Button(root, text = 'Press and hold ;)')
     button.bind('<Button>', lambda event: start_time(event, timer))
-    button.bind('<ButtonRelease>', lambda event: released(event, timer, message), add = '+')
+    button.bind('<x>', lambda event: released(event, timer, message), add = '+')
     button.focus()
     button.pack(expand = True)
 
