@@ -1,16 +1,16 @@
 def main():
-    do_the_thing()
+    make_phrase(250, 300)
 
-def do_the_thing():
+def make_phrase(min_chars, max_chars):
     big_list, titles = combine_lines('big_phrases_unsorted')
     sentence_list = devide_into_sentences(big_list)
-    filtered_list = filter_sentence_list(sentence_list, titles, 240, 290)
+    filtered_list = filter_sentence_list(sentence_list, titles, min_chars, max_chars)
 
     f = open('filtered_file.txt', 'w')
     for item in filtered_list:
         f.write('#' + item[0] + '\n')
         f.write(item[1] + '\n')
-        print(f'{len(item[1])}: {item}')
+        #print(f'{len(item[1])}: {item}')
 
 def devide_into_sentences(big_list):
     new_list = []
@@ -40,7 +40,7 @@ def devide_into_sentences(big_list):
     return new_list
 
 
-def filter_sentence_list(big_list, titles, min_chars = 275, max_chars = 325):
+def filter_sentence_list(big_list, titles, min_chars, max_chars):
     #takes the sentence list and makes a new list of strings that are within the word count bound
     #can combine sentences within the same chapter but not sentences outside of that
     new_list = []
@@ -91,7 +91,7 @@ def combine_lines(file_name):
         elif to_do == add:
             current_string += line.rstrip() + ' '
     big_strings.append(current_string)
-    return (big_strings, string_of_titles)
+    return big_strings, string_of_titles
 
 if __name__ == '__main__': main()
 

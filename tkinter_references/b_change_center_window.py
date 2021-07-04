@@ -33,7 +33,7 @@ def center_the_screen(root, window_width = 600, window_height = 400, resizable =
     root.geometry(f'{window_width}x{window_height}+{center_x}+{center_y}')
 
     if not resizable:
-        turn_off_resizing(root)
+        root.resizable(False, False)
 
 def turn_off_resizing(root):
     root.resizable(False, False)
