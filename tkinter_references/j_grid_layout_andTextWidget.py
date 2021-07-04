@@ -37,6 +37,7 @@ def MY_STUFF(root):#didnt really work
 
     #https://www.tutorialspoint.com/python/tk_text.htm
     textbox = tk.Text(root, height=1, wrap = tk.WORD)#height = 1 gotten from https://stackoverflow.com/questions/11464608/tkinter-text-widget-distorting-column-sizes
+    textbox.insert("1.0" , " ")
     textbox.bind('<Return>', lambda event: return_pressed(event, root, textbox.get("1.0", tk.END), textbox))
     textbox.grid(column = 0, row=1, columnspan=2, sticky=tk.NSEW, padx=15, pady = 10 )
     textbox.focus()

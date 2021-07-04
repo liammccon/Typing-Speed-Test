@@ -4,7 +4,7 @@ def main():
 def do_the_thing():
     big_list, titles = combine_lines('big_phrases_unsorted')
     sentence_list = devide_into_sentences(big_list)
-    filtered_list = filter_sentence_list(sentence_list, titles, 175, 225)
+    filtered_list = filter_sentence_list(sentence_list, titles, 240, 290)
 
     f = open('filtered_file.txt', 'w')
     for item in filtered_list:
