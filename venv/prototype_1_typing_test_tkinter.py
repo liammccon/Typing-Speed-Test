@@ -3,23 +3,13 @@ import tkinter as tk
 from tkinter import ttk
 from file_help_typing_test import *
 
-#TODO make the helper .py thing a class and use its object here!
-
-#USING OOP!
-def button_pressed(textbox):
-    textbox.config(state=tk.NORMAL)
-    textbox.delete("1.0", tk.END)
-    textbox.insert("1.0", " ")
-    textbox.focus()
-
-
+#ISSUES
+#-trying to delete the return press doesnt work because it deletes before return is processed.
+#-if you press return on empty box itll still show the return
 
 class App(tk.Tk):
     def __init__(self):
         super().__init__()
-        self.textbox = tk.Text(self, height=1, state = tk.DISABLED,
-                          wrap=tk.WORD)  # height = 1 gotten from https://stackoverflow.com/questions/11464608/tkinter-text-widget-distorting-column-sizes
-        center_the_screen(self, 600, 400, False)
         self.title('Typing Test')
 
         self.columnconfigure(0, weight=1)
@@ -28,16 +18,31 @@ class App(tk.Tk):
         self.rowconfigure(1, weight=3)
         self.rowconfigure(2, weight=1)
 
-        self.random_string_from_text, self.text_title = random_phrase_and_title('filtered_file.txt')
-        self.before_start = True
+        self.random_string_from_text, self.text_title = None, None
+        self.get_random_string()
 
-        self.text_to_type = ttk.Label(self, text="Press 'Enter' to start the typing test, "
-                                                 "and press 'Enter' again when you finished typing",
+        self.before_start = True
+        self.finished = False
+        self.t1, self.t2 = None, None
+
+        self.before_start_text = "Press 'Enter' to start the typing test, and press 'Enter' again when you finished typing"
+        self.before_start_wraplength = 300
+        self.text_to_type = ttk.Label(self, text = self.before_start_text,
                                       anchor=tk.CENTER, background='grey',
                                       foreground='black',
-                                      wraplength=300,
+                                      wraplength = self.before_start_wraplength,
                                       justify=tk.CENTER)
+
+
+        self.button = ttk.Button(self, text="Clear text", command=lambda: self.button_pressed())
+        self.textbox = tk.Text(self, height=1, state=tk.DISABLED,
+                               wrap=tk.WORD)  # height = 1 gotten from https://stackoverflow.com/questions/11464608/tkinter-text-widget-distorting-column-sizes
+        center_the_screen(self, 600, 400, False)
+
         self.set_grid()
+
+    def get_random_string(self):
+        self.random_string_from_text, self.text_title = random_phrase_and_title('filtered_file.txt')
 
     def set_grid(self):
         #Label
@@ -52,8 +57,7 @@ class App(tk.Tk):
         self.textbox.grid(column=0, row=1, columnspan=2, sticky=tk.NSEW, padx=15, pady=10)
 
         #Button
-        button = ttk.Button(self, text="Clear text", command = lambda: button_pressed(self.textbox))
-        button.grid(column=0, row=2, columnspan=2, sticky='EW', padx=15, pady=10)
+        self.button.grid(column=0, row=2, columnspan=2, sticky='EW', padx=15, pady=10)
 
     def return_pressed(self, text = None, textbox = None, string_from_text = None):
         if self.before_start:
@@ -63,19 +67,42 @@ class App(tk.Tk):
             self.before_start = False
             self.t1 = time.time()
         else:
-            self.t2 = time.time()
-            print(text)
-            # TODO
-            accuracy_float = compare_char_sequence(string_from_text, text)
-            user_words = string_to_word_char_list(text)
-            words_per_min = ((len(user_words) / (self.t2 - self.t1)) * 60)  # NEED TO ADD TIMER SOMEWHERE
-            score = get_score(words_per_min, accuracy_float)
-            print(f'Words per minute: %.2f ' % words_per_min)
-            print(f'Accuracy: %.0f percent' % (accuracy_float * 100))
-            print('Your score: %.0f' % score)
-            #
-            textbox.config(state=tk.DISABLED)
+            if len(text)>1 and not self.finished:#NOT WORKING (if you just press enter at beg)
+                self.t2 = time.time()
+                print(text)
+                # TODO
+                accuracy_float = compare_char_sequence(string_from_text, text)
+                user_words = string_to_word_char_list(text)
+                words_per_min = ((len(user_words) / (self.t2 - self.t1)) * 60)  # NEED TO ADD TIMER SOMEWHERE
+                score = get_score(words_per_min, accuracy_float)
+                a = f'Words per minute: %.2f\n' % words_per_min
+                b = f'Accuracy: %.0f percent\n' % (accuracy_float * 100)
+                c= f'Your score: %.0f\n' % score
+                display = a + b + c
+                self.text_to_type.config(text = display)
+                print(f'Words per minute: %.2f ' % words_per_min)
+                print(f'Accuracy: %.0f percent' % (accuracy_float * 100))
+                print('Your score: %.0f' % score)
+                #
+                textbox.config(state=tk.DISABLED)
+                self.finished=True
+                self.button.config(text="Try again?")
+            else: #text length is empty
+                self.textbox.config(state=tk.NORMAL)
+                self.textbox.delete("1.0", tk.END) #NOT WORKING
+                self.textbox.focus()
+                print("HI")
 
+    def button_pressed(self):
+        self.textbox.config(state=tk.NORMAL)
+        self.textbox.delete("1.0", tk.END)
+        self.textbox.focus()
+        if self.finished:
+            self.before_start=True
+            self.finished=False
+            self.text_to_type.config(text = self.before_start_text, wraplength = self.before_start_wraplength)
+            self.text_to_type.focus()
+            self.get_random_string()
 def center_the_screen(root, window_width = 600, window_height = 400, resizable = True):
     # get screen dimension
     screen_width = root.winfo_screenwidth()
