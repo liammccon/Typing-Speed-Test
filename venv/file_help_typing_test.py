@@ -1,4 +1,5 @@
 import random
+
 def make_phrase(min_chars, max_chars):
     big_list, titles = combine_lines('big_phrases_unsorted')
     sentence_list = devide_into_sentences(big_list)
