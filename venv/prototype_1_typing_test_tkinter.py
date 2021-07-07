@@ -4,7 +4,8 @@ from tkinter import ttk
 from file_help_typing_test import *
 
 #ISSUES
-#-Make it so pressing enter while finished will work
+#-Remove button. Its not needed anymore
+#-on before start, switch focus to the textbox but still have it work with enter(?)
 
 class App(tk.Tk):
     def __init__(self):
@@ -49,7 +50,7 @@ class App(tk.Tk):
         self.text_to_type.focus()
 
         #Text, heres good info: https://www.tutorialspoint.com/python/tk_text.htm
-        self.textbox.bind('<Return>', lambda event: self.return_pressed(self.textbox.get("1.0", tk.END), self.textbox, self.random_string_from_text))
+        self.textbox.bind('<Return>', lambda event: self.return_pressed())
         self.textbox.bind('<KeyRelease-Return>', lambda event: self.return_released())
         self.textbox.grid(column=0, row=1, columnspan=2, sticky=tk.NSEW, padx=15, pady=10)
 
@@ -62,8 +63,12 @@ class App(tk.Tk):
         self.finished = False
         self.text_to_type.config(text=self.before_start_text, wraplength=self.before_start_wraplength)
         self.text_to_type.focus()
-        self.textbox.config(state=tk.DISABLED)
         self.button.config(text = "", state = tk.DISABLED)
+
+        self.textbox.config(state=tk.NORMAL)
+        self.textbox.delete("1.0", tk.END) #BUG
+        self.textbox.config(state = tk.DISABLED)
+
         self.get_random_string()
 
     def set_during_test(self):
@@ -89,7 +94,9 @@ class App(tk.Tk):
         a = f'Words per minute: %.2f\n' % words_per_min
         b = f'Accuracy: %.0f percent\n' % (accuracy_float * 100)
         c = f'Your score: %.0f\n' % score
-        display = a + b + c
+        d = '------------------------\n'
+        e = "Press 'Enter' to try again\n"
+        display = a + b + c + d + e
         self.text_to_type.config(text=display)
         print(f'Words per minute: %.2f ' % words_per_min)
         print(f'Accuracy: %.0f percent' % (accuracy_float * 100))
@@ -105,11 +112,13 @@ class App(tk.Tk):
                 self.textbox.delete("1.0", tk.END)
                 print('hey')
 
-    def return_pressed(self, text = None, textbox = None, string_from_text = None):
+    def return_pressed(self):
         if self.before_start:
             self.set_during_test()
+        if self.finished:
+            self.set_before_start()
         else:
-            if len(text)>1 and not self.finished:#NOT WORKING (if you just press enter at beg)
+            if len(self.textbox.get("1.0", tk.END))>1 and not self.finished:#NOT WORKING (if you just press enter at beg)
                 self.set_finished()
 
 
