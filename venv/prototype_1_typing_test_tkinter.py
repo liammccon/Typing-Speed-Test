@@ -4,7 +4,7 @@ from tkinter import ttk
 from file_help_typing_test import *
 
 #ISSUES
-#-Remove button. Its not needed anymore
+#-always says "~From ..." from the last paragraph not the right one
 #-on before start, switch focus to the textbox but still have it work with enter(?)
 
 class App(tk.Tk):
@@ -16,10 +16,9 @@ class App(tk.Tk):
         self.columnconfigure(1, weight=1)
         self.rowconfigure(0, weight=3)
         self.rowconfigure(1, weight=3)
-        self.rowconfigure(2, weight=1)
+        #self.rowconfigure(2, weight=1)
 
         self.random_string_from_text, self.text_title = None, None
-
         self.before_start = True
         self.finished = False
         self.t1, self.t2 = None, None
@@ -31,8 +30,6 @@ class App(tk.Tk):
         self.text_to_type = ttk.Label(self, anchor=tk.CENTER, background='grey',
                                       foreground='black',
                                       justify=tk.CENTER)
-        #Button
-        self.button = ttk.Button(self, command=lambda: self.button_pressed())
 
         #Text
         self.textbox = tk.Text(self, height=1,
@@ -52,10 +49,7 @@ class App(tk.Tk):
         #Text, heres good info: https://www.tutorialspoint.com/python/tk_text.htm
         self.textbox.bind('<Return>', lambda event: self.return_pressed())
         self.textbox.bind('<KeyRelease-Return>', lambda event: self.return_released())
-        self.textbox.grid(column=0, row=1, columnspan=2, sticky=tk.NSEW, padx=15, pady=10)
-
-        #Button
-        self.button.grid(column=0, row=2, columnspan=2, sticky='EW', padx=15, pady=10)
+        self.textbox.grid(column=0, row=1, columnspan=2, sticky=tk.NSEW, padx=15, pady=20)
 
     def set_before_start(self):
         #Set the widgets to their state before the user starts the typing test
@@ -63,7 +57,6 @@ class App(tk.Tk):
         self.finished = False
         self.text_to_type.config(text=self.before_start_text, wraplength=self.before_start_wraplength)
         self.text_to_type.focus()
-        self.button.config(text = "", state = tk.DISABLED)
 
         self.textbox.config(state=tk.NORMAL)
         self.textbox.delete("1.0", tk.END) #BUG
@@ -78,7 +71,6 @@ class App(tk.Tk):
         self.text_to_type.config(wraplength=500, text=self.random_string_from_text + "\n\n~" + self.text_title)
         self.textbox.config(state=tk.NORMAL)
         self.textbox.focus()
-        self.button.config(state=tk.NORMAL, text="Clear text")
         self.t1 = time.time()
 
     def set_finished(self):
@@ -98,19 +90,8 @@ class App(tk.Tk):
         e = "Press 'Enter' to try again\n"
         display = a + b + c + d + e
         self.text_to_type.config(text=display)
-        print(f'Words per minute: %.2f ' % words_per_min)
-        print(f'Accuracy: %.0f percent' % (accuracy_float * 100))
-        print('Your score: %.0f' % score)
         self.textbox.config(state=tk.DISABLED)
         self.finished = True
-        self.button.config(text="Try again?")
-
-    def return_released(self):
-        #Protects against user pressing enter when nothing has been entered
-        if not self.before_start or not self.finished:
-            if len(self.textbox.get("1.0", tk.END)) <= 2:
-                self.textbox.delete("1.0", tk.END)
-                print('hey')
 
     def return_pressed(self):
         if self.before_start:
@@ -118,9 +99,14 @@ class App(tk.Tk):
         if self.finished:
             self.set_before_start()
         else:
-            if len(self.textbox.get("1.0", tk.END))>1 and not self.finished:#NOT WORKING (if you just press enter at beg)
+            if len(self.textbox.get("1.0", tk.END))>1 and not self.finished:
                 self.set_finished()
 
+    def return_released(self):
+        #Protects against user pressing enter when nothing has been entered
+        if not self.before_start or not self.finished:
+            if len(self.textbox.get("1.0", tk.END)) <= 2:
+                self.textbox.delete("1.0", tk.END)
 
     def button_pressed(self):
         self.textbox.config(state=tk.NORMAL)
@@ -128,8 +114,6 @@ class App(tk.Tk):
         self.textbox.focus()
         if self.finished:
             self.set_before_start()
-
-
 
     def get_random_string(self):
         self.random_string_from_text, self.text_title = random_phrase_and_title('filtered_file.txt')
@@ -151,7 +135,7 @@ def center_the_screen(root, window_width = 600, window_height = 400, resizable =
 
 
 def main():
-    make_phrase(300, 350)
+    make_phrase(200, 250)
     app = App()
     app.mainloop()
 

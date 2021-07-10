@@ -1,5 +1,7 @@
 import random
 
+#TODO Error in random_phrase_and_title. not working right
+
 def make_phrase(min_chars, max_chars):
     big_list, titles = combine_lines('big_phrases_unsorted')
     sentence_list = devide_into_sentences(big_list)
@@ -128,7 +130,7 @@ def string_to_word_char_list(string):
         index += 1
     return words_letters
 
-def random_phrase_and_title(file_name):
+def random_phrase_and_title(file_name): #TODO Error here?
     f = open(file_name)
     line_list = []
     title = ''
@@ -160,8 +162,13 @@ def compare_char_sequence(model_string, user_string, seq_size = 3):
         if seq in model_seq_list_copy:
             model_seq_list_copy.remove(seq)
             seq_from_user_in_model += 1
+
+    if user_seq_list_length == 0: #In case entered text is 1 char long
+        user_in_model_percent = 0
+    else:
+        user_in_model_percent = seq_from_user_in_model / user_seq_list_length
+
     model_in_user_percent = seq_from_model_in_user / model_seq_list_length
-    user_in_model_percent = seq_from_user_in_model / user_seq_list_length
     smaller_of_both = model_in_user_percent if model_in_user_percent < user_in_model_percent else user_in_model_percent
     return smaller_of_both
 
