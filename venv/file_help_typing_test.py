@@ -1,6 +1,5 @@
 import random
 
-#TODO Error in random_phrase_and_title. not working right
 
 def make_phrase(min_chars, max_chars):
     big_list, titles = combine_lines('big_phrases_unsorted')
@@ -130,16 +129,18 @@ def string_to_word_char_list(string):
         index += 1
     return words_letters
 
-def random_phrase_and_title(file_name): #TODO Error here?
+def random_phrase_and_title(file_name):
     f = open(file_name)
+
     line_list = []
-    title = ''
+    title_list = []
     for line in f:
         if line[0: 1] == '#':
-            title = line[1:]
-            continue
-        line_list.append(line.rstrip())
-    return line_list[random.randint(0, len(line_list) - 1 )], title
+            title_list.append(line[1:])
+        else:
+            line_list.append(line.rstrip())
+    rand = random.randint(0, len(line_list) - 1 )
+    return line_list[rand], title_list[rand]
 
 def compare_char_sequence(model_string, user_string, seq_size = 3):
     model_string = model_string.rstrip()
