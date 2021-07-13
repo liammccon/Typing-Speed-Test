@@ -3,9 +3,6 @@ import tkinter as tk
 from tkinter import ttk
 from file_help_typing_test import *
 
-#ISSUES
-#-always says "~From ..." from the last paragraph not the right one
-#-on before start, switch focus to the textbox but still have it work with enter(?)
 
 class App(tk.Tk):
     def __init__(self):
