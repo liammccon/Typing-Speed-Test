@@ -1,68 +1,76 @@
 #From Pride and Prejudice, Chapter 3
-She could not imagine what business he could have in town so soon after his arrival in Hertfordshire; and she began to fear that he might be always flying about from one place to another, and never settled at Netherfield as he ought to be.
+Mr. Bingley was obliged to be in town the following day, and, consequently, unable to accept the honour of their invitation, etc.
 #From Pride and Prejudice, Chapter 3
-Lady Lucas quieted her fears a little by starting the idea of his being gone to London only to get a large party for the ball; and a report soon followed that Mr. Bingley was to bring twelve ladies and seven gentlemen with him to the assembly.
+Mr. Bingley was good-looking and gentlemanlike; he had a pleasant countenance, and easy, unaffected manners.
 #From Pride and Prejudice, Chapter 3
-Mr. Bingley had soon made himself acquainted with all the principal people in the room; he was lively and unreserved, danced every dance, was angry that the ball closed so early, and talked of giving one himself at Netherfield.
+His character was decided. He was the proudest, most disagreeable man in the world, and everybody hoped that he would never come there again.
 #From Pride and Prejudice, Chapter 18
-The rest of the evening brought her little amusement. She was teased by Mr. Collins, who continued most perseveringly by her side, and though he could not prevail on her to dance with him again, put it out of her power to dance with others.
+In vain did she entreat him to stand up with somebody else, and offer to introduce him to any young lady in the room.
 #From Pride and Prejudice, Chapter 18
-He assured her, that as to dancing, he was perfectly indifferent to it; that his chief object was by delicate attentions to recommend himself to her and that he should therefore make a point of remaining close to her the whole evening.
+She owed her greatest relief to her friend Miss Lucas, who often joined them, and good-naturedly engaged Mr. Collins’s conversation to herself.
 #From Pride and Prejudice, Chapter 18
-Elizabeth preserved as steady a silence as either Mrs. Hurst or Miss Bingley; and even Lydia was too much fatigued to utter more than the occasional exclamation of “Lord, how tired I am!” accompanied by a violent yawn.
+Mrs. Hurst and her sister scarcely opened their mouths, except to complain of fatigue, and were evidently impatient to have the house to themselves.
 #From Pride and Prejudice, Chapter 18
-Bingley was all grateful pleasure, and he readily engaged for taking the earliest opportunity of waiting on her, after his return from London, whither he was obliged to go the next day for a short time.
+Mr. Bingley and Jane were standing together, a little detached from the rest, and talked only to each other.
+#From Pride and Prejudice, Chapter 18
+Of having another daughter married to Mr. Collins, she thought with equal certainty, and with considerable, though not equal, pleasure.
 #From Pride and Prejudice, Chapter 27
-The only pain was in leaving her father, who would certainly miss her, and who, when it came to the point, so little liked her going, that he told her to write to him, and almost promised to answer her letter.
+He could tell her nothing new of the wonders of his presentation and knighthood; and his civilities were worn out, like his information.
 #From Pride and Prejudice, Chapter 27
-Sir William Lucas, and his daughter Maria, a good-humoured girl, but as empty-headed as himself, had nothing to say that could be worth hearing, and were listened to with about as much delight as the rattle of the chaise.
+It was a journey of only twenty-four miles, and they began it so early as to be in Gracechurch Street by noon.
 #From Pride and Prejudice, Chapter 27
-Elizabeth loved absurdities, but she had known Sir William’s too long. He could tell her nothing new of the wonders of his presentation and knighthood; and his civilities were worn out, like his information.
-#From Pride and Prejudice, Chapter 27
-On the stairs were a troop of little boys and girls, whose eagerness for their cousin’s appearance would not allow them to wait in the drawing-room, and whose shyness, as they had not seen her for a twelvemonth, prevented their coming lower.
-#From Pride and Prejudice, Chapter 27
-Their first object was her sister; and she was more grieved than astonished to hear, in reply to her minute enquiries, that though Jane always struggled to support her spirits, there were periods of dejection.
+All was joy and kindness. The day passed most pleasantly away; the morning in bustle and shopping, and the evening at one of the theatres.
 #From Frankenstein, Chapter 4
-Remember, I am not recording the vision of a madman. The sun does not more certainly shine in the heavens than that which I now affirm is true. Some miracle might have produced it, yet the stages of the discovery were distinct and probable.
+Remember, I am not recording the vision of a madman. The sun does not more certainly shine in the heavens than that which I now affirm is true.
 #From Frankenstein, Chapter 4
-The astonishment which I had at first experienced on this discovery soon gave place to delight and rapture. After so much time spent in painful labour, to arrive at once at the summit of my desires was the most gratifying consummation of my toils.
+The astonishment which I had at first experienced on this discovery soon gave place to delight and rapture.
 #From Frankenstein, Chapter 4
-Although I possessed the capacity of bestowing animation, yet to prepare a frame for the reception of it, with all its intricacies of fibres, muscles, and veins, still remained a work of inconceivable difficulty and labour.
+After so much time spent in painful labour, to arrive at once at the summit of my desires was the most gratifying consummation of my toils.
 #From Frankenstein, Chapter 4
-As the minuteness of the parts formed a great hindrance to my speed, I resolved, contrary to my first intention, to make the being of a gigantic stature, that is to say, about eight feet in height, and proportionably large.
+What had been the study and desire of the wisest men since the creation of the world was now within my grasp.
 #From Frankenstein, Chapter 4
-No one can conceive the variety of feelings which bore me onwards, like a hurricane, in the first enthusiasm of success. Life and death appeared to me ideal bounds, which I should first break through, and pour a torrent of light into our dark world.
+I was like the Arabian who had been buried with the dead and found a passage to life, aided only by one glimmering and seemingly ineffectual light.
 #From Frankenstein, Chapter 4
-A new species would bless me as its creator and source; many happy and excellent natures would owe their being to me. No father could claim the gratitude of his child so completely as I should deserve theirs.
+I will not lead you on, unguarded and ardent as I then was, to your destruction and infallible misery.
 #From Frankenstein, Chapter 4
-Pursuing these reflections, I thought that if I could bestow animation upon lifeless matter, I might in process of time (although I now found it impossible) renew life where death had apparently devoted the body to corruption.
+When I found so astonishing a power placed within my hands, I hesitated a long time concerning the manner in which I should employ it.
 #From Frankenstein, Chapter 4
-One secret which I alone possessed was the hope to which I had dedicated myself; and the moon gazed on my midnight labours, while, with unrelaxed and breathless eagerness, I pursued nature to her hiding-places.
+The materials at present within my command hardly appeared adequate to so arduous an undertaking, but I doubted not that I should ultimately succeed.
+#From Frankenstein, Chapter 4
+Nor could I consider the magnitude and complexity of my plan as any argument of its impracticability.
+#From Frankenstein, Chapter 4
+After having formed this determination and having spent some months in successfully collecting and arranging my materials, I began.
+#From Frankenstein, Chapter 4
+No one can conceive the variety of feelings which bore me onwards, like a hurricane, in the first enthusiasm of success.
+#From Frankenstein, Chapter 4
+Life and death appeared to me ideal bounds, which I should first break through, and pour a torrent of light into our dark world.
+#From Frankenstein, Chapter 4
+A new species would bless me as its creator and source; many happy and excellent natures would owe their being to me.
+#From Frankenstein, Chapter 4
+Sometimes, on the very brink of certainty, I failed; yet still I clung to the hope which the next day or the next hour might realise.
+#From Frankenstein, Chapter 4
+I collected bones from charnel-houses and disturbed, with profane fingers, the tremendous secrets of the human frame.
 #From Frankenstein, Chapter 9
-The shutting of the gates regularly at ten o’clock and the impossibility of remaining on the lake after that hour had rendered our residence within the walls of Geneva very irksome to me. I was now free.
+I was now free. Often, after the rest of the family had retired for the night, I took the boat and passed many hours upon the water.
 #From Frankenstein, Chapter 9
-Sometimes, with my sails set, I was carried by the wind; and sometimes, after rowing into the middle of the lake, I left the boat to pursue its own course and gave way to my own miserable reflections.
+But I was restrained, when I thought of the heroic and suffering Elizabeth, whom I tenderly loved, and whose existence was bound up in mine.
 #From Frankenstein, Chapter 9
-But that could not be. Remorse extinguished every hope. I had been the author of unalterable evils, and I lived in daily fear lest the monster whom I had created should perpetrate some new wickedness.
+I had been the author of unalterable evils, and I lived in daily fear lest the monster whom I had created should perpetrate some new wickedness.
 #From Frankenstein, Chapter 9
-I had an obscure feeling that all was not over and that he would still commit some signal crime, which by its enormity should almost efface the recollection of the past. There was always scope for fear so long as anything I loved remained behind.
+There was always scope for fear so long as anything I loved remained behind. My abhorrence of this fiend cannot be conceived.
 #From Frankenstein, Chapter 9
-My abhorrence of this fiend cannot be conceived. When I thought of him I gnashed my teeth, my eyes became inflamed, and I ardently wished to extinguish that life which I had so thoughtlessly bestowed.
-#From Frankenstein, Chapter 9
-When I reflected on his crimes and malice, my hatred and revenge burst all bounds of moderation. I would have made a pilgrimage to the highest peak of the Andes, could I, when there, have precipitated him to their base.
+I would have made a pilgrimage to the highest peak of the Andes, could I, when there, have precipitated him to their base.
 #From The Library of Congress, by Neely Tucker
-So on this momentous day, the first federal holiday of Juneteenth, let’s look at how 19th-century media covered the birth of what would become the nation’s official holiday marking the end of slavery.
+Journalism is often called the first draft of history. As any writer can tell you, first drafts are often messy.
 #From The Library of Congress, by Neely Tucker
-So on this momentous day, the first federal holiday of Juneteenth, let’s look at how 19th-century media covered the birth of what would become the nation’s official holiday marking the end of slavery. That was the June 19, 1865, order by Maj.
+That was the June 19, 1865, order by Maj. Gen. Gordon Granger in Galveston, Texas, that abolished slavery in that state, the last Confederate holdout.
 #From The Library of Congress, by Neely Tucker
-So on this momentous day, the first federal holiday of Juneteenth, let’s look at how 19th-century media covered the birth of what would become the nation’s official holiday marking the end of slavery. That was the June 19, 1865, order by Maj. Gen.
+He established the legal authority to assume military command in the state and named his staff in two brief general orders, or military proclamations.
 #From The Library of Congress, by Neely Tucker
-He established the legal authority to assume military command in the state and named his staff in two brief general orders, or military proclamations. Then he cut to the heart of the matter in “General Orders, No.
+” “The people are informed that, in accordance with a proclamation from the Executive of the United States, all slaves are free.
 #From The Library of Congress, by Neely Tucker
-He established the legal authority to assume military command in the state and named his staff in two brief general orders, or military proclamations. Then he cut to the heart of the matter in “General Orders, No. 3.
+This involves an absolute equality of personal rights and rights of property, between former masters and slaves.
 #From The Library of Congress, by Neely Tucker
-” “The people are informed that, in accordance with a proclamation from the Executive of the United States, all slaves are free. This involves an absolute equality of personal rights and rights of property, between former masters and slaves.
+Black people in Texas, the last in America to find out that the Emancipation Proclamation applied to them, were out of bondage.
 #From The Library of Congress, by Neely Tucker
-” Clear and concise, not a word wasted. Black people in Texas, the last in America to find out that the Emancipation Proclamation applied to them, were out of bondage. Slavery was dead. A terrible era was over.
-#From The Library of Congress, by Neely Tucker
-Today, we mark that announcement as a very big deal. The nation, founded on the ideal of equality, fought the deadliest war in its history over slavery, yet waited 156 years to officially mark the demise of the institution.
+Black people in Texas, the last in America to find out that the Emancipation Proclamation applied to them, were out of bondage. Slavery was dead.
