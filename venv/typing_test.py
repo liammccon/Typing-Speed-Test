@@ -13,7 +13,6 @@ class App(tk.Tk):
         self.columnconfigure(1, weight=1)
         self.rowconfigure(0, weight=3)
         self.rowconfigure(1, weight=3)
-        #self.rowconfigure(2, weight=1)
 
         self.random_string_from_text, self.text_title = None, None
         self.before_start = True
@@ -132,7 +131,7 @@ def center_the_screen(root, window_width = 600, window_height = 400, resizable =
 
 
 def main():
-    make_phrase(200, 250)
+    make_phrase(100, 150)
     app = App()
     app.mainloop()
 
